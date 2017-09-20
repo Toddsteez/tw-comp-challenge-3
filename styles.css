@@ -1,0 +1,790 @@
+/* Global */
+* {
+    box-sizing: inherit;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Widely Used */
+a {
+  color: #545F66;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin: 0;
+  }
+
+  /* User block top left */
+  
+  .nav-aside {
+    display: none;
+    background-color: #8BA4D2;
+    min-width: 150px;
+  }
+  
+  .user-block {
+    border-bottom: 2px solid #F6E7EE;
+    margin: 20px 0 0 0;
+    width: 100%;
+  }
+  
+  .user-image {
+    background: url('assets/images/Todd Watner - F.jpg') no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    height: 100px;
+    margin: auto;
+    width: 100px;
+  }
+  
+  .user-name,
+  .user-dropdown {
+    color: #545F66;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .user-name {
+    cursor: pointer;
+    margin: 10px 0 0;
+  }
+  
+  .user-dropdown {
+    border-radius: 100%;
+    font-size: 8px;
+    margin: 0 5px;
+  }
+  
+  /* Aside navigation */
+  
+  .nav-icon {
+    width: 15px;
+  }
+  
+  section h4 {
+    color: #545F66;
+    font-size: 12px;
+    margin-left: 15px;
+  }
+  
+  /* Navigation content */
+  
+  .nav-main,
+  .nav-admin,
+  .nav-categories {
+    border-bottom: 2px solid #F6E7EE;
+    margin: 20px 0;
+    max-width: 100%;
+  }
+  
+  .nav-link {
+    color: #545F66;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 300%;
+    margin: 0 0 0 15px;
+    text-decoration: none;
+  }
+  
+  .checkbox {
+    margin-left: 8px;
+  }
+  
+  .nav-main-content,
+  .nav-admin-content {
+    align-items: center;
+    color: #545F66;
+    display: flex;
+    padding-left: 15px;
+  }
+
+  .nav-main-content:hover {
+    background-color: #7287AC;
+    border-left: 3px solid #E0D2D9;
+    color: white;
+    cursor: pointer;
+  }
+
+  .nav-admin-content:hover {
+    background-color: #7287AC;
+    border-left: 3px solid #E0D2D9;
+    color: white;
+    cursor: pointer;
+  }
+
+  .checkboxes:hover {
+    background-color: #7287AC;
+    border-left: 3px solid #E0D2D9;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Main content */
+  
+  .main-container {
+    width: 100%;
+  }
+  
+  .head-container {
+    align-items: center;
+    border-bottom: 1px solid #E1EFE7;
+    display: flex;
+    font-size: 25px;
+    height: 50px;
+    text-align: center;
+    vertical-align: baseline;
+  }
+  
+  .header-icon {
+    align-items: center;
+    color: #545F66;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    line-height: 45px;
+    width: 50px;
+  }
+  
+  .menu-btn {
+    border-right: 1px solid #E1EFE7;
+    cursor: pointer;
+  }
+  
+  .expand-btn {
+    border-left: 1px solid #E1EFE7;
+    cursor: pointer;
+  }
+  
+  .add-user-btn,
+  .calendar-add-btn,
+  .grid-btn {
+    border-left: 1px solid #E1EFE7;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .search-input {
+    border: none;
+    border-bottom: 1px solid #E1EFE7;
+    color: #545F66;
+    flex-grow: 1;
+    font-size: 18px;
+    height: 44px;
+    padding: 3px;
+    outline: none;
+  }
+  
+  .job-container {
+    align-items: center;
+    /* border-bottom: solid 3px transparent; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .title-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+  }
+  
+  .job-title {
+    color: #8BA4D2;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 10px 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .job-location {
+    color: #545F66;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px 0 10px;
+  }
+  
+  .job-actions-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    width: 200px;
+  }
+  
+  .action-btn {
+    background-color: inherit;
+    border: 1px solid #F6E7EE;
+    border-radius: 50%;
+    color: #545F66;
+    cursor: pointer;
+    font-size: 13px;
+    height: 25px;
+    outline: none;
+    width: 20px;
+  }
+  
+  .action-btn:hover {
+    background-color: #FAF4F7;    
+  }
+
+  .job-open-btn {
+    border-radius: 50px;
+    width: 55px;
+  }
+  
+  /* Job container tabs */
+  
+  .content-tabs-container {
+    display: flex;
+    border-bottom: 3px solid #E1EFE7;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  p.tab {
+    border-bottom: 3px solid #fff;
+    color: #545F66;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0 20px;
+    padding-bottom: 15px;
+  }
+  
+  .tab:hover {
+    border-bottom: 3px solid #7287AC;
+  }
+
+  h3 {
+    color: #8BA4D2;
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  .page-content {
+    background-color: #E6F1EB;
+  }
+  
+  .jobs-tab,
+  .interviews-tab,
+  .activity-tab,
+  .broadcast-tab,
+  .notifications-tab {
+    display: none;
+  }
+  
+  /* Container behind data graphs */
+  
+  .summary-container {
+    background-color: #E6F1EB;
+  }
+  
+  /* Data graphs */
+  
+  .data-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Circle graphs / bar graph / buttons */
+  
+  .circle-data-container,
+  .graph-data-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  
+  .data-visualization {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    min-height: 300px;
+    padding: 30px 0 30px 0;
+  }
+  
+  .data-and-button {
+    text-align: center;
+  }
+  
+  .circle {
+    align-items: center;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 155px;
+    justify-content: center;
+    margin: 20px;
+    width: 155px;
+  }
+  
+  .graph-1 {
+    border: 10px solid #7287AC;
+    border-bottom: 10px solid #F6E7EE;
+    color: #545F66;
+  }
+  
+  .graph-2 {
+    border: 10px solid #7287AC;
+    border-bottom: 10px solid #F6E7EE;
+    border-left: 10px solid #F6E7EE;
+    color: #545F66;
+  }
+  
+  .graph-3 {
+    border: 10px solid #F6E7EE;
+    border-bottom: 10px solid #7287AC;
+    color: #545F66;
+  }
+  
+  .data-graph {
+    text-align: center;
+  }
+  
+  .graph {
+    background: url(assets/images/graph.png) no-repeat;
+    background-size: contain;
+    height: 120px;
+    margin: 20px;
+    width: 300px;
+  }
+  
+  .page-button {
+    background-color: #FCFDFC;
+    border: 2px solid #F6E7EE;
+    border-radius: 25px;
+    color: #8BA4D2;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: 700;
+    text-align: center;
+    width: 220px;
+  }
+  
+  /* Divider */
+  
+  .divider {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+  
+  .horizontal-rule {
+    background-color: #E0D2D9;
+    border: none;
+    color: #E0D2D9;
+    display: block;
+    height: 2px;
+    width: 45%;
+  }
+  
+  .divider-arrow {
+    border: 1px solid #E0D2D9;
+    border-radius: 50%;
+    color: #E0D2D9;
+    display: block;
+    height: 20px;
+    margin: 5px;
+    text-align: center;
+    width: 20px;
+  }
+  
+  /* Details container - bottom half of main */
+  
+  .details-container {
+    align-items: center;
+    background-color: #E6F1EB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+    width: 100%;
+  }
+  
+  /* Job table */
+  
+  table {
+    border-collapse: collapse;
+    box-shadow: 0 0 10px #E1EFE7;
+    padding: 0 20px;
+    width: 90%;
+  }
+  
+  th {
+    background-color: #AABCDE;
+    border-radius: 2px 2px 0 0;
+    padding: 15px 0 15px 30px;
+    text-align: left;
+  }
+  
+  .table-edit {
+    background-color: #BFCDE6;
+    border: none;
+    border-radius: 3px;
+    color: #FCFDFC;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 10px;
+    outline: none;
+    padding: 10px 15px;
+  }
+  
+  tbody {
+    padding: 0 20px;
+  }
+  
+  tr {
+    background-color: #FCFDFC;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  td {
+    border-bottom: 1px solid #E1EFE7;
+    padding: 20px 20px;
+  }
+  
+  th h5 {
+    color: #FFF;
+    display: inline-block;
+  }
+  
+  .table-spacing {
+    display: none;
+  }
+  
+  .table-lead {
+    border-bottom: none;
+    color: #AABCDE;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 20px;
+    text-transform: uppercase;
+    vertical-align: text-top;
+    width: 90%;
+  }
+  
+  .table-info {
+    color: #8BA4D2;
+    font-weight: 300;
+    line-height: 145%;
+    margin: auto;
+    padding: 0 10px 20px 20px;
+    width: 90%;
+  }
+  
+  .hiring-lead {
+    background: url(assets/images/mickey.png) no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    display: inline-block;
+    height: 50px;
+    margin-right: 15px;
+    vertical-align: middle;
+    width: 50px;
+  } 
+  
+  /* Right aside social */
+  
+  .interior-aside-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .social-btn-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+  }
+  
+  .social-text {
+    color: #FCFDFC;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  
+  .social-btn {
+    background-color: #545F66;
+    border: none;
+    border-radius: 3px;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    height: 50px;
+    margin: 7px 0;
+    outline: none;
+    position: relative;
+    width: 270px;
+  }
+  
+  .social-btn:hover {
+    background-color: #92999D;
+  }
+  .social-icon {
+    margin-left: -70px;
+    position: absolute;
+  }
+  
+  /* Sidebar container below social */
+  
+  .sidebar-container {
+    align-items: center;
+    color: #545F66;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+  }
+  
+  .sidebar {
+    border-bottom: 2px solid #E1EFE7;
+    width: 90%;
+  }
+  
+  .sidebar-title {
+    font-weight: 700;
+    margin: 20px 0 10px;
+  }
+  
+  .field-button {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  
+  .copy {
+    cursor: pointer;
+    background-color: #92999D;
+    box-shadow: 0 0 10px #E1EFE7;
+    border: none;
+    border-radius: 0 2px 2px 0;
+    color: #FCFDFC;
+    margin: 0;
+    outline: none;
+    padding: 15px;
+    width: 20%;
+  }
+  
+  .copy:hover {
+    background-color: #545F66;
+  }
+
+  .sidebar-field {
+    background-color: #FCFDFC;
+    border-radius: 2px 0 0 2px;
+    box-shadow: 0 0 10px #E1EFE7;
+    display: inline-block;
+    padding: 15px;
+    width: 65%;
+  }
+  
+  .sidebar-input {
+    color: #B1B6B9;
+    font-size: 16px;
+    flex-grow: 1;
+  }
+  
+  .sidebar-icon {
+    margin-right: 10px;
+  }
+  
+  .sidebar-text {
+    font-size: 14px;
+  }
+  
+  /* Media queries */
+
+  @media screen and (min-width: 430px) {
+    .jobs-tab {
+      display: inline;
+    }
+    .content-tabs-container {
+      justify-content: flex-start;
+    }
+  }
+  
+  @media screen and (min-width: 550px) {
+    .interviews-tab {
+      display: inline;
+    }
+    .data-container {}
+    .circle-data-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 450px;
+    }
+    .page-button {
+      flex: 0 1 50%;
+    }
+    .graph {
+      height: 180px;
+      width: 450px;
+    }
+    .add-user-btn,
+    .calendar-add-btn,
+    .grid-btn {
+      display: block;
+    }
+    .expand-btn {
+      display: none;
+    }
+    .job-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: 20px;
+    }
+    .title-container {
+      align-items: flex-start;
+      margin-left: 25px;
+      width: 50%;
+    }
+    .content-tabs-container {
+      flex: 0 1 100%;
+      margin-top: 30px;
+    }
+    .job-actions-container {
+      margin: 0 25px;
+    }
+  }
+  
+  @media screen and (min-width: 650px) {
+    .activity-tab {
+      display: block;
+    }
+  }
+  
+  @media screen and (min-width: 700px) {
+    .nav-aside {
+      display: block;
+    }
+    .activity-tab {
+      display: none;
+    }
+    table {
+      width: 90%;
+    }
+    tr {
+      display: table-row;
+    }
+    .table-spacing {
+      border: none;
+      display: table-cell;
+      width: 2%;
+    }
+    .table-lead {
+      border-bottom: 1px solid #E1EFE7;
+      padding-left: 20px;
+      width: 36%;
+    }
+    .table-info {
+      color: #8BA4D2;
+      font-weight: 300;
+      line-height: 145%;
+      padding: 10px 20px;
+      width: 60%;
+    }
+    .hiring-lead {
+      background: url(assets/images/mickey.png) no-repeat;
+      background-size: cover;
+      border-radius: 100%;
+      display: inline-block;
+      height: 50px;
+      margin-right: 15px;
+      vertical-align: middle;
+      width: 50px;
+    }
+  }
+  
+  @media screen and (min-width: 825px) {
+    .activity-tab {
+      display: block;
+    }
+  }
+  
+  @media screen and (min-width: 910px) {
+    .broadcast-tab {
+      display: block;
+    }
+  }
+  
+  @media screen and (min-width: 960px) {
+    .data-container {}
+    .circle-data-container {
+      width: 650px;
+    }
+    .social-btn-container {
+      flex-direction: row;
+      margin: 10px 0;
+    }
+    .social-btn {
+      margin: 0 5px;
+      width: 220px;
+    }
+    .notifications-tab {
+      display: block;
+    }
+    .more-tab {
+      display: none;
+    }
+  }
+  
+  @media screen and (min-width: 1050px) {
+    .social-btn-container {
+      flex-direction: column;
+      margin: 0;
+    }
+    .social-btn {
+      margin: 5px 0;
+      width: 280px;
+    }
+    .details-container {
+      align-items: flex-start;
+      flex-direction: row;
+    }
+    .job-listing-table {
+      width: 60%;
+    }
+    .interior-aside-container {
+      align-items: center;
+      justify-content: flex-start;
+      max-width: 310px;
+      padding-top: 0;
+      padding-left: 20px;
+      width: 40%;
+    }
+    .facebook-btn {
+      margin-top: 0;
+    }
+  }
+  
+  @media screen and (min-width: 1300px) {
+    .data-container {
+      flex-direction: row;
+    }
+  }
+  

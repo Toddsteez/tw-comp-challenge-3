@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Language" content="en">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <script src="https://use.fontawesome.com/feee93a86d.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+  <title>Static Comp 3</title>
+</head>
+
+<body>
+  <aside class="nav-aside">
+    <nav class="nav-container">
+      <div class="user-block">
+        <div class="user-image"></div>
+        <p class="user-info">
+          <h6 class="user-name">Todd Watner<i class="fa fa-chevron-down fa-1x user-dropdown"></i></h6>
+        </p>
+      </div>
+      <section class="nav-main">
+        <h4>Main</h4>
+        <div class="nav-main-content">
+          <i class="fa fa-home fa-1x nav-icon"></i>
+          <a class="nav-link">HOME</a>
+        </div>
+        <div class="nav-main-content">
+          <i class="fa fa-briefcase nav-icon"></i>
+          <a class="nav-link">JOBS</a>
+        </div>
+        <div class="nav-main-content">
+          <i class="fa fa-file-text nav-icon"></i>
+          <a class="nav-link">RESUMES</a>
+        </div>
+        <div class="nav-main-content">
+          <i class="fa fa-tasks nav-icon"></i>
+          <a class="nav-link">SKILLS</a>
+        </div>
+        <div class="nav-main-content">
+          <i class="fa fa-calendar nav-icon"></i>
+          <a class="nav-link">CALENDAR</a>
+        </div>
+      </section>
+      <section class="nav-admin">
+        <h4>Admin</h4>
+        <div class="nav-admin-content">
+          <i class="fa fa-users nav-icon"></i>
+          <a class="nav-link">USERS</a>
+        </div>
+        <div class="nav-admin-content">
+          <i class="fa fa-map-marker nav-icon"></i>
+          <a class="nav-link">LOCATIONS</a>
+        </div>
+        <div class="nav-admin-content">
+          <i class="fa fa-sitemap nav-icon"></i>
+          <a class="nav-link">WORKFLOWS</a>
+        </div>
+        <div class="nav-admin-content nav-selected">
+          <i class="fa fa-newspaper-o nav-icon"></i>
+          <a class="nav-link nav-link-listings">JOB LISTINGS</a>
+        </div>
+        <div class="nav-admin-content">
+          <i class="fa fa-share-alt nav-icon"></i>
+          <a class="nav-link">SOCIAL</a>
+        </div>
+      </section>
+      <section class="nav-categories">
+        <h4>Categories</h4>
+        <div class="checkboxes">
+          <input type="checkbox" id="admin-chkbox">
+          <label for="admin-chkbox"><a class="nav-link checkbox">Administrative</a></label>
+        </div>
+        <div class="checkboxes">
+          <input type="checkbox" id="design-chkbox">
+          <label for="design-chkbox"><a class="nav-link checkbox">Design</a></label>
+        </div>
+        <div class="checkboxes">
+          <input type="checkbox" id="hr-chkbox">
+          <label for="hr-chkbox"><a class="nav-link checkbox">Human Resources</a></label>
+        </div>
+        <div class="checkboxes">
+          <input type="checkbox" id="exec-chkbox">
+          <label for="exec-chkbox"><a class="nav-link checkbox">Executive</a></label>
+        </div>
+      </section>
+    </nav>
+  </aside>
+  <main class="main-container">
+    <header class="head-container">
+      <div class="header-icon menu-btn">
+        <i class="fa fa-bars fa-1x"></i>
+      </div>
+      <div class="header-icon search-btn">
+        <i class="fa fa-search fa-1x"></i>
+      </div>
+      <input type="text" name="search" placeholder="Search for a job, task, or resume" class="search-input"/>
+      <div class="header-icon add-user-btn">
+        <i class="fa fa-user-plus fa-1x"></i>
+      </div>
+      <div class="header-icon calendar-add-btn">
+        <i class="fa fa-calendar-plus-o fa-1x"></i>
+      </div>
+      <div class="header-icon grid-btn">
+        <i class="fa fa-th fa-1x"></i>
+      </div>
+      <div class="header-icon expand-btn">
+        <i class="fa fa-chevron-left fa-1x"></i>
+      </div>
+    </header>
+    <section class="job-container">
+      <div class="title-container">
+        <h2 class="job-title">Software Developer</h2>
+        <p class="job-location"><i class="fa fa-map-marker"></i> Denver, Colorado - <a>Preview this post</a></p>
+      </div>
+      <div class="job-actions-container">
+        <button type="button" class="action-btn job-open-btn"><i class="fa fa-circle fa-1x job-open-btn-icon"></i> OPEN</button>
+        <button type="button" class="action-btn job-bookmark-btn"><i class="fa fa-bookmark fa-1x"></i></button>
+        <button type="button" class="action-btn job-edit-btn"><i class="fa fa-pencil fa-1x"></i></button>
+        <button type="button" class="action-btn job-delete-btn"><i class="fa fa-trash fa-1x"></i></button>
+      </div>
+
+      <div class="content-tabs-container">
+        <p class="tab selected-tab">SUMMARY</p>
+        <p class="tab applicants-tab">APPLICANTS</p>
+        <p class="tab jobs-tab">JOB BOARDS</p>
+        <p class="tab interviews-tab">INTERVIEWS</p>
+        <p class="tab activity-tab">ACTIVITY</p>
+        <p class="tab broadcast-tab">BROADCAST</p>
+        <p class="tab notifications-tab">NOTIFICATIONS</p>
+        <p class="tab more-tab">MORE...</p>
+      </div>
+    </section>
+
+    <section class="summary-container">
+      <div class="data-container">
+        <div class="circle-data-container">
+          <div class="circle graph-1">
+            <h3>3,154</h3>
+            <p>APPLICANTS</p>
+          </div>
+          <div class="circle graph-2">
+            <h3>1,546</h3>
+            <p>INTERVIEWS</p>
+          </div>
+          <div class="circle graph-3">
+            <h3>912</h3>
+            <p>FORWARDS</p>
+          </div>
+          <div class="page-button">TOTALS - Out of 5,231 views</div>
+        </div>
+
+        <div class="graph-data-container">
+          <div class="graph"></div>
+          <div class="page-button">APPLICANTS / DAY</div>
+        </div>
+      </div>
+
+      <div class="divider">
+        <div class="horizontal-rule"></div>
+        <i class="fa fa-chevron-up fa-1x divider-arrow"></i>
+        <div class="horizontal-rule"></div>
+      </div>
+
+    </section>
+    <section class="details-container">
+
+      <table class="job-listing-table">
+        <thead>
+          <th colspan="4">
+            <h5>JOB DESCRIPTION</h5>
+            <button class="table-edit">
+              <i class="fa fa-pencil fa-1x"></i>
+              EDIT
+            </button>
+          </th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="table-spacing"></td>
+            <td class="table-lead">Position Title</td>
+            <td class="table-info">Software Developer</td>
+            <td class="table-spacing"></td>
+          </tr>
+          <tr>
+            <td class="table-spacing"></td>
+            <td class="table-lead">Location</td>
+            <td class="table-info">Denver, Colorado</td>
+            <td class="table-spacing"></td>
+          </tr>
+          <tr>
+            <td class="table-spacing"></td>
+            <td class="table-lead">Employment Type</td>
+            <td class="table-info">Unemployed</td>
+            <td class="table-spacing"></td>
+          </tr>
+          <tr>
+            <td class="table-spacing"></td>
+            <td class="table-lead">Experience</td>
+            <td class="table-info">Noobie</td>
+            <td class="table-spacing"></td>
+          </tr>
+          <tr>
+            <td class="table-spacing"></td>
+            <td class="table-lead">Status</td>
+            <td class="table-info">Open</td>
+            <td class="table-spacing"></td>
+          </tr>
+          <tr>
+            <td class="table-spacing"></td>
+            <td class="table-lead">Description</td>
+            <td class="table-info">Hail-shot Buccaneer boatswain rum Blimey belaying pin ahoy measured fer yer chains code of conduct sheet. Pirate Round gabion weigh anchor rigging hempen halter warp lugsail driver jib wench. Crack Jennys tea cup bilge water starboard ahoy maroon broadside Sea Legs chase guns salmagundi six pounders.</td>
+            <td class="table-spacing"></td>
+          </tr>
+          <tr>
+            <td class="table-spacing"></td>
+            <td class="table-lead">Hiring Lead</td>
+            <td class="table-info">
+              <div class="hiring-lead" alt="Image of Mickey Mouse from Disney"></div>
+              Mickey Mouse
+            </td>
+            <td class="table-spacing"></td>
+          </tr>
+          <tr>
+            <td class="table-spacing"></td>
+            <td class="table-lead">APPROVED SALARY</td>
+            <td class="table-info">$75,000 - $500,000 <span class="salary-comment">depending on experience</span></td>
+            <td class="table-spacing"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <aside class="interior-aside-container">
+        <div class="social-btn-container">
+          <button type="button" name="facebook-btn" class="social-btn facebook-btn"><i class="fa fa-facebook fa-1x social-icon"></i> Post to Facebook</button>
+          <button type="button" name="twitter-btn" class="social-btn twitter-btn"><i class="fa fa-twitter fa-1x social-icon"></i> Tweet this Job</button>
+          <button type="button" name="linkedin-btn" class="social-btn linkedin-btn"><i class="fa fa-linkedin fa-1x social-icon"></i> Post to LinkedIn</button>
+        </div>
+
+        <div class="sidebar-container">
+          <div class="sidebar">
+            <p class="sidebar-title"><i class="fa fa-globe fa-1x sidebar-icon"></i> Link to this Job</p>
+            <p class="sidebar-text">Share this job listing.</p>
+            <div class="field-button">
+              <input type="text" placeholder="http://linkielinkie.com/linkie" class="sidebar-input">
+              <button class="copy">Copy</button>
+            </div>
+          </div>
+
+          <div class="sidebar">
+            <p class="sidebar-title"><i class="fa fa-puzzle-piece fa-1x sidebar-icon"></i> Use the Button Widget</p>
+            <p class="sidebar-text">This widget embeds the buttons for sharing the job posting for submitting a resume on your website.</p>
+            <div class="field-button">
+              <input type="text" placeholder="www.websitey.io/websitey/website" class="sidebar-input">
+              <button class="copy">Copy</button>
+            </div>
+          </div>
+
+          <div class="sidebar">
+            <p class="sidebar-title"><i class="fa fa-paper-plane fa-1x sidebar-icon"></i> Upload Resumes by Email</p>
+            <p class="sidebar-text">You can automatically upload multiple resumes to this job by emailing the address below.</p>
+            <div class="field-button">
+              <input type="text" placeholder="todd@watner.com" class="sidebar-input">
+              <button class="copy">Email</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+</body>
+
+</html>
